@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 常规方法 会跨域 -->
+    <!-- <script>
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "http://localhost:345", true);
+      xhr.withCredentials = true;
+      xhr.send();
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState != 4) return;
+        if (xhr.status != 200) {
+          console.log(xhr.status + ": " + xhr.statusText);
+        } else {
+          console.log(xhr.responseText);
+        }
+      };
+    </script> -->
+
+    <!-- <script>
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "http://localhost:345", true);
+      xhr.withCredentials = true;
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhr.send();
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState != 4) return;
+        if (xhr.status != 200) {
+          console.log(xhr.status + ": " + xhr.statusText);
+        } else {
+          console.log(xhr.responseText);
+        }
+      };
+    </script> -->
+
+    <!-- fetch -->
+    <script>
+      fetch("http://localhost:345?id=1").then((res) => {
+        console.log(res);
+      });
+    </script>
+
+    <!-- JSONP -->
+    <!-- <script>
+      var script = document.createElement("script");
+      script.src = "http://localhost:345?id=1&callback=handleCallback";
+      document.body.appendChild(script);
+      script.onload = function () {
+        console.log("loaded");
+      };
+      script.onerror = function () {
+        console.log("error");
+      };
+
+      function handleCallback (data) {
+        console.log(data);
+      }
+    </script> -->
+  </body>
+</html>

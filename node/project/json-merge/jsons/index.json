@@ -1,0 +1,12 @@
+{
+    "algo_id": "9662",
+    "algo_name": "口罩识别",
+    "algo_name_en": "mask detection",
+    "sdk_env": 2,
+    "algo_type": 5,
+    "cas": "cas_v1.0.0_cv4.5.1.tar.gz",
+    "local_analysis": 0,
+    "support_jixing_versions": [
+        "V7"
+    ]
+}

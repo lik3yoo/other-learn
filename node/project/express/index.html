@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+		>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Document</title>
+
+	</head>
+	<body>
+		<button id="get">
+			get
+		</button>
+		<button id="post">post</button>
+		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+			$(function() {
+				$('#get').on('click', function() {
+					$.ajax({
+						url: "http://localhost:888/user_list",
+						data: {
+							zipcode: 97201,
+						},
+						success: function(result) {
+							$("#weather-temp").html("<strong>" + result + "</strong> degrees")
+						},
+					})
+				})
+
+			})
+
+		</script>
+	</body>
+</html>

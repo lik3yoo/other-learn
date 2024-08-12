@@ -1,0 +1,19 @@
+{
+  "name": "video-duration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.8.9"
+  },
+  "dependencies": {
+    "cli-table": "^0.3.11",
+    "fluent-ffmpeg": "^2.1.2"
+  }
+}
